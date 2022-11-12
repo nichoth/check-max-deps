@@ -1,0 +1,27 @@
+{
+  "name": "@socketsupply/check-max-deps",
+  "version": "0.0.0",
+  "description": "CLI to check your dependencies",
+  "bin": "./cli/index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socketsupply/check-max-deps.git"
+  },
+  "keywords": [
+    "CLI",
+    "dependencies"
+  ],
+  "author": "nichoth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/socketsupply/check-max-deps/issues"
+  },
+  "homepage": "https://github.com/socketsupply/check-max-deps#readme"
+}

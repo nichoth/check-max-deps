@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "types": ["node"],
+    "lib": ["es2018"],
+    "noEmit": true,
+    "checkJs": true,
+    "module": "commonjs",
+    "strict": true
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "index.js"
+  ]
+}
