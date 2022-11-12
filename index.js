@@ -6,19 +6,18 @@ import childProcess from 'child_process'
 const exec = util.promisify(childProcess.exec)
 
 /**
- * @param {{ cwd: string, expected: string }} options 
+ * @param {{ cwd: string, expected: number }} options 
  */
 async function checkMaxDeps ({ cwd, expected }) {
   const res = await exec(
-    'npm ls --prod --depth 500 | grep -v deduped | wc -l',
-    {
-      cwd: cwd
-    }
+    'npm ls --omit=dev --depth 500 | grep -v deduped | wc -l',
+    { cwd }
   )
+  
 
-  const depCount = res.stdout.toString().trim()
-  const depCountInt = parseInt(depCount, 10)
-  const expectedInt = parseInt(expected, 10)
+  let resInt = parseInt(res.stdout.toString().trim(), 10)
+  const depCountInt = (resInt - 3)
+  const expectedInt = expected
 
   if (depCountInt > expectedInt) {
     return depCountInt
