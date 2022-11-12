@@ -6,6 +6,8 @@
   "bin": "./cli/index.js",
   "main": "index.js",
   "scripts": {
+    "preversion": "./cli/index.js . 0",
+    "postversion": "git push && git push --tags",
     "test": "node ./test/index.js | tap-arc"
   },
   "devDependencies": {
