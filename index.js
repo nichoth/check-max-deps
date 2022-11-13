@@ -10,18 +10,19 @@ const exec = util.promisify(childProcess.exec)
  */
 async function checkMaxDeps ({ cwd, expected }) {
   const res = await exec(
-    'npm ls --omit=dev --depth 500 | grep -v deduped | wc -l',
+    'npm ls --omit=dev --depth 500 | grep -v deduped',
     { cwd }
   )
   
+  // parse the format of `npm ls` output
+  const lines = res.stdout.toString().split('\n')
+    .filter(Boolean)
+    .slice(1)
+    .filter(line => !line.includes('empty'))
 
-  let resInt = parseInt(res.stdout.toString().trim(), 10)
-  const depCountInt = (resInt - 3)
-  const expectedInt = expected
+  const depsCount = lines.length
 
-  if (depCountInt > expectedInt) {
-    return depCountInt
-  }
+  if (depsCount > expected) return depsCount
 
   return false
 }

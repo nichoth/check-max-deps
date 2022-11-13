@@ -22,5 +22,6 @@ test('check dependencies ok', t => {
         t.equal(res, 'npm dependencies not too large\n')
     } catch (error) {
         t.fail('should not return an error')
+        console.log('error', error.toString())
     }
 })
