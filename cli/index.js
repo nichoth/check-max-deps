@@ -9,14 +9,14 @@ const argv = process.argv.slice(2)
 const cwd = argv[0]
 if (!cwd) {
   console.log('missing directory')
-  console.log('check-max-deps $DIR $COUNT')
+  console.log('check-deps $DIR $COUNT')
   process.exit(1)
 }
 
 const expected = argv[1]
 if (!expected) {
   console.log('missing max deps count')
-  console.log('check-max-deps $DIR $COUNT')
+  console.log('check-deps $DIR $COUNT')
   process.exit(1)
 }
 
