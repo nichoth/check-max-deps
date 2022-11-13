@@ -3,7 +3,9 @@
   "type": "module",
   "version": "0.0.0",
   "description": "CLI to check your dependencies",
-  "bin": "./cli/index.js",
+  "bin": {
+    "check-deps": "./cli/index.js"
+  },
   "main": "index.js",
   "scripts": {
     "preversion": "./cli/index.js . 0",
