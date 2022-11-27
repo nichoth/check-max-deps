@@ -21,14 +21,12 @@ if (!expected) {
 }
 
 const depCount = await checkMaxDeps({
-    cwd: argv[0],
-    expected: parseInt(argv[1], 10)
+    cwd,
+    expected: parseInt(expected, 10)
 })
 if (depCount > parseInt(expected, 10)) {
     console.log('too many npm ls --prod dependencies')
-    console.log(
-      `Found ${depCount} dependencies, expected ${expected}`
-    )
+    console.log(`Found ${depCount} dependencies, expected ${expected}`)
     process.exit(1)
 } 
 
