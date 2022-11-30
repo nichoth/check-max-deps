@@ -27,3 +27,9 @@ To check that you have 0 dependencies before bumping the version:
   }
 }
 ```
+
+## test
+```
+npm test
+```
+
