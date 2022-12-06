@@ -19,7 +19,8 @@ test('check dependencies with too many', t => {
 test('check dependencies ok', t => {
     try {
         const res = childProcess.execSync(cmd + ' . 0').toString()
-        t.equal(res, 'npm dependencies not too large\n')
+        t.equal(res, 'npm dependencies not too large\n',
+            'should return a correct response for passing test')
     } catch (error) {
         t.fail('should not return an error')
         console.log('error', error.toString())

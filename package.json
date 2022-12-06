@@ -1,5 +1,5 @@
 {
-  "name": "@socketsupply/check-max-deps",
+  "name": "@nichoth/check-max-deps",
   "type": "module",
   "version": "0.0.0",
   "description": "CLI to check your dependencies",
