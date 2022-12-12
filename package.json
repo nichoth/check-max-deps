@@ -1,7 +1,7 @@
 {
   "name": "@nichoth/check-max-deps",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CLI to check your dependencies",
   "bin": {
     "check-deps": "./cli/index.js"
