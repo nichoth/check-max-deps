@@ -5,7 +5,7 @@ This can be helpful as a part of the package scripts.
 
 ## install
 ```
-npm i -D @socketsupply/check-max-deps
+npm i -D @nichoth/check-max-deps
 ```
 
 ## use
