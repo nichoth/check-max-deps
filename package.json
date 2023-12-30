@@ -9,13 +9,13 @@
   "main": "index.js",
   "scripts": {
     "preversion": "./cli/index.js . 0",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push && git push --tags && npm publish",
     "test": "node ./test/index.js | tap-arc"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
-    "tap-arc": "^0.3.5",
-    "tapzero": "^0.6.1"
+    "tap-arc": "^1.2.2",
+    "@nichoth/tapzero": "^0.8.4"
   },
   "repository": {
     "type": "git",
@@ -32,3 +32,4 @@
   },
   "homepage": "https://github.com/nichoth/check-max-deps#readme"
 }
+

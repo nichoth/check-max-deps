@@ -2,7 +2,7 @@
 // @ts-check
 'use strict'
 
-import { test } from 'tapzero'
+import { test } from '@nichoth/tapzero'
 import childProcess from 'child_process'
 
 const cmd = 'node ./cli/index.js'
